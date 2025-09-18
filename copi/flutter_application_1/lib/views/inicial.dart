@@ -17,6 +17,7 @@ class InicialViewState extends State<InicialView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -25,15 +26,17 @@ class InicialViewState extends State<InicialView> {
             Image.network ("https://i1.sndcdn.com/artworks-6S0p70w7UME8-0-t500x500.jpg",height: 190),
             TextField(
               controller: _userController,
-              decoration: const InputDecoration(labelText: "Usuario"),
+              decoration: const InputDecoration(labelText: "USERNAME"), style: TextStyle(color: Color.fromARGB(255, 252, 4, 4)),
             ),
             TextField(
               controller: _passController,
               obscureText: true,
-              decoration: const InputDecoration(labelText: "Contraseña"),
+              decoration: const InputDecoration(labelText: "PASSWORD"),style: TextStyle(color: Color.fromARGB(255, 252, 4, 4)),
+
             ),
             const SizedBox(height: 20),
             ElevatedButton(
+              
               onPressed: () {
                 context.read<LoginBloc>().add(
                       LoginSubmitted(
@@ -42,6 +45,10 @@ class InicialViewState extends State<InicialView> {
                       ),
                     );
               },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 133, 14, 14),
+                foregroundColor: Colors.white,
+              ),
               child: const Text("Ingresar"),
             )
           ],

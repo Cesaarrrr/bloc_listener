@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../cubit/text_cubit.dart';
+import '../cubit/cancion_cubit.dart';
+import '../cubit/cancion_state.dart';
 
 class SuccessView extends StatelessWidget {
   const SuccessView({super.key});
@@ -15,26 +16,35 @@ class SuccessView extends StatelessWidget {
           builder: (context, state) {
             return Center(
               child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.network("https://i.scdn.co/image/ab67616d0000b27398ea0e689c91f8fea726d9bb", height: 190),
-                const SizedBox(height: 20),
-                Text(state.text1, style: const TextStyle(fontSize: 20)),
-                Text(state.text2, style: const TextStyle(fontSize: 20)),
-                Text(state.text3, style: const TextStyle(fontSize: 20)),
-                const SizedBox(height: 30),
-                ElevatedButton(
-                  onPressed: () {
-                    context.read<TextsCubit>().updateTexts(
-                      "Sky!",
-                      "Vamp Anthem",
-                      "New Tank",
-                    );
-                  },
-                  child: const Text("Cambiar Nombres"),
-                )
-              ],
-            ) 
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.network(
+                    "https://i.scdn.co/image/ab67616d0000b27398ea0e689c91f8fea726d9bb",
+                    height: 190,
+                  ),
+                  const SizedBox(height: 20),
+
+                  if (state.isLoading)
+                    const CircularProgressIndicator()
+                  else ...[
+                    Text(state.cancion1, style: const TextStyle(fontSize: 20)),
+                    Text(state.cancion2, style: const TextStyle(fontSize: 20)),
+                    Text(state.cancion3, style: const TextStyle(fontSize: 20)),
+                  ],
+
+                  const SizedBox(height: 30),
+                  ElevatedButton(
+                    onPressed: () {
+                      context.read<TextsCubit>().updateTexts(
+                            "4.Sky!",
+                            "5.Vamp Anthem",
+                            "6.New Tank",
+                          );
+                    },
+                    child: const Text("Cambiar Nombres"),
+                  )
+                ],
+              ),
             );
           },
         ),

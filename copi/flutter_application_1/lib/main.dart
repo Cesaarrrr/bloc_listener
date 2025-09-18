@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/views/failure_view.dart' show FailureView;
-import 'package:flutter_application_1/views/inicial_view.dart' show InicialView;
-import 'package:flutter_application_1/views/loading_view.dart' show LoadingView;
+import 'package:flutter_application_1/views/failure.dart' show FailureView;
+import 'package:flutter_application_1/views/inicial.dart' show InicialView;
+import 'package:flutter_application_1/views/loading.dart' show LoadingView;
 import 'package:flutter_application_1/views/succes_view.dart' show SuccessView;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'bloc/login_bloc.dart';
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
             }
             if (state is LoginSuccess) {
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text("Login exitoso!")),
+                const SnackBar(content: Text("inicio de sesion exitoso!")),
               );
             }
           },
