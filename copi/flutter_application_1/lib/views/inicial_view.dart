@@ -22,6 +22,7 @@ class InicialViewState extends State<InicialView> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Image.network ("https://i1.sndcdn.com/artworks-6S0p70w7UME8-0-t500x500.jpg",height: 190),
             TextField(
               controller: _userController,
               decoration: const InputDecoration(labelText: "Usuario"),

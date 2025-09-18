@@ -17,13 +17,8 @@ class FailureView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(state.message, style: const TextStyle(color: Colors.red)),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pop(); // vuelve a inicial
-              },
-              child: const Text("Reintentar"),
-            ),
+            const SizedBox(height: 50),
+          
           ],
         ),
       ),

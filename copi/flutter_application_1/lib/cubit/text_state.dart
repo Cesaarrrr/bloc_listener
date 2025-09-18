@@ -13,9 +13,9 @@ class TextsState {
 
   factory TextsState.initial() {
     return const TextsState(
-      text1: "Texto inicial 1",
-      text2: "Texto inicial 2",
-      text3: "Texto inicial 3",
+      text1: "Rockstar Made",
+      text2: "Stop Breathing",
+      text3: "Meh!",
     );
   }
 

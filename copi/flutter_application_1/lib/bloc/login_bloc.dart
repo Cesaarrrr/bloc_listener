@@ -13,10 +13,10 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
     await Future.delayed(const Duration(seconds: 2));
 
-    if (event.username == "admin" && event.password == "1234") {
+    if (event.username == "play" && event.password == "carti") {
       emit(LoginSuccess(event.username));
     } else {
-      emit(LoginFailure("Credenciales incorrectas"));
+      emit(LoginFailure("User o contraseña incorrecta!!"));
     }
   }
 }
