@@ -32,17 +32,7 @@ class SuccessView extends StatelessWidget {
                     Text(state.cancion3, style: const TextStyle(fontSize: 20)),
                   ],
 
-                  const SizedBox(height: 30),
-                  ElevatedButton(
-                    onPressed: () {
-                      context.read<TextsCubit>().updateTexts(
-                            "4.Sky!",
-                            "5.Vamp Anthem",
-                            "6.New Tank",
-                          );
-                    },
-                    child: const Text("Cambiar Nombres"),
-                  )
+                
                 ],
               ),
             );

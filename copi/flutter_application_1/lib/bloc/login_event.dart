@@ -6,11 +6,11 @@ abstract class LoginEvent extends Equatable {
 }
 
 class LoginSubmitted extends LoginEvent {
-  final String username;
+  final String email;
   final String password;
 
-  LoginSubmitted({required this.username, required this.password});
+  LoginSubmitted({required this.email, required this.password});
 
   @override
-  List<Object> get props => [username, password];
+  List<Object> get props => [email, password];
 }
