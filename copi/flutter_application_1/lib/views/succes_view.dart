@@ -31,8 +31,6 @@ class SuccessView extends StatelessWidget {
                     Text(state.cancion2, style: const TextStyle(fontSize: 20)),
                     Text(state.cancion3, style: const TextStyle(fontSize: 20)),
                   ],
-
-                
                 ],
               ),
             );
