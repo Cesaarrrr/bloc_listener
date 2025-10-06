@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../cubit/cancion_cubit.dart';
-import '../cubit/cancion_state.dart';
+import 'succes_pages/cubit/cancion_cubit.dart';
+import 'succes_pages/cubit/cancion_state.dart';
 
 class SuccessView extends StatelessWidget {
   const SuccessView({super.key});

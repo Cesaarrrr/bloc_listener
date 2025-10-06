@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../bloc/login_bloc.dart';
-import '../bloc/login_state.dart';
+import 'login_pages/bloc/login_bloc.dart';
+import 'login_pages/bloc/login_state.dart';
 
 class FailureView extends StatelessWidget {
   const FailureView({super.key});
